@@ -10,3 +10,5 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 GET		/cars						controllers.Application.getCars(manufacturer ?= null, model ?= null)
 GET		/cars/:manufacturer/:model	controllers.Application.getCar(manufacturer, model)
+POST	/cars						controllers.Application.addCar()
+PUT		/cars/:manufacturer/:model	controllers.Application.updateCar(manufacturer, model)
