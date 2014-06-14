@@ -1,0 +1,21 @@
+[{	"manufacturer":"Volkswagen",
+	"model":"Gol",
+	"attributes":[
+		{"name":"color","value":"black"}
+	]},
+{	
+	"manufacturer":"Honda",
+	"model":"Civic",
+	"attributes":[
+		{"name":"color","value":"gray"},
+		{"name":"year","value":"2010"}
+	]},
+{
+	"manufacturer":"Fiat",
+	"model":"Strada",
+	"attributes":[
+		{"name":"color","value":"white"},
+		{"name":"year","value":"2012"},
+		{"name":"price","value":"$14000.00"}
+	]}
+]
