@@ -11,6 +11,9 @@ import play.cache.Cache;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+/**
+ * Application global settings.
+ */
 public class Global extends GlobalSettings {
 
 	private static final String CARS_FILE = "cars.json";
@@ -29,6 +32,12 @@ public class Global extends GlobalSettings {
         Logger.info("Application shutdown...");
     }
 
+    /**
+     * Loads in the cache the cars from the cars.json file.
+     * 
+     * @throws Exception
+     * 		If was not possible to load the cars, for whatever reason.
+     */
     private void loadCars() throws Exception {
     	Logger.info("Loading " + CARS_FILE);
     	InputStream is = Global.class.getResourceAsStream(CARS_FILE);

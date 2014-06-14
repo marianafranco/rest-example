@@ -1,5 +1,8 @@
 package model;
 
+/**
+ * Attribute POJO.
+ */
 public class Attribute {
 
 	private String name;

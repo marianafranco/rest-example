@@ -2,6 +2,9 @@ package model;
 
 import java.util.List;
 
+/**
+ * Car POJO.
+ */
 public class Car {
 
 	private String model;
