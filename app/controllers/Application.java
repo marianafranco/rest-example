@@ -107,7 +107,7 @@ public class Application extends Controller {
         }
         
         cars.add(newCar);
-        Cache.set("cars", cars);
+        Cache.set("cars", cars, 0);
     	return created();
     }
 
@@ -149,7 +149,7 @@ public class Application extends Controller {
         	return notFound();
         } else {
         	cars.add(newCar);
-        	Cache.set("cars", cars);
+        	Cache.set("cars", cars, 0);
         	return ok();
         }
     }

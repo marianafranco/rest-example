@@ -28,11 +28,7 @@ public class Global extends GlobalSettings {
 		}
     }
 
-    public void onStop(Application app) {
-        Logger.info("Application shutdown...");
-    }
-
-    /**
+	/**
      * Loads in the cache the cars from the cars.json file.
      * 
      * @throws Exception
@@ -43,7 +39,11 @@ public class Global extends GlobalSettings {
     	InputStream is = Global.class.getResourceAsStream(CARS_FILE);
     	ObjectMapper mapper = new ObjectMapper();
     	List<Car> cars = mapper.readValue(is, new TypeReference<List<Car>>(){});
-    	Cache.set("cars", cars);
+    	Cache.set("cars", cars, 0);
     	Logger.info(cars.size() + " cars loaded.");
+    }
+    
+    public void onStop(Application app) {
+        Logger.info("Application shutdown...");
     }
 }
